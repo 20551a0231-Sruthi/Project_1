@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="./Ocean.jpg">
+    <style>
+        body{
+            display: grid;
+        }
+        /* 1st section */
+        .el1{
+            width: 100%;
+            height: 100vh;
+        }
+         .section1{
+            display: grid;
+            grid-template-columns: 140px;
+            grid-template-rows: 7px;
+         }
+         .ocean{
+            font-weight: 600;
+            color: rgb(85, 141, 233);
+            padding-left: 30px;
+            display: inline-block;
+            font-size: 30px;
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        .vibes{
+            font-weight: 600;
+            color: rgb(137, 129, 129);
+            display: inline-block;
+            font-size: 25px;
+            padding-top: 10px;
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        .matter{
+            font-weight: 600;
+            color: rgb(137, 129, 129);
+            padding-top: 50px;
+            grid-column: 1/3;
+            grid-row: 2/3;
+            padding-left: 120px;
+            font-size: 20px;
+            font-style: italic;
+        } 
+        .section2{
+            width: 100%;
+            height: 350px;
+            background-color: white;
+            background-image: url(./ocean\ vibe.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .section3{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 50px;
+            border: 1px;
+        }
+        .item1{
+            border: 1px solid rgb(205, 190, 190);
+            padding: 20px;
+        }
+        .item2{
+            border: 1px solid rgb(205, 190, 190);
+            padding: 20px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        .item3{
+            border: 1px solid rgb(205, 190, 190);
+            padding: 20px;
+        }
+        .item4{
+            border: 1px solid rgb(205, 190, 190);
+            padding: 20px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        .item5{
+            border: 1px solid rgb(205, 190, 190);
+            padding: 20px;
+            padding-left: 30px;
+        }
+
+        /* 2nd section */
+        .el2{
+            height: 495vh;
+            background-image: url(./background.jpg), url(./background\ color.jpg);
+            background-repeat: repeat;
+            background-blend-mode: overlay;
+        }
+        .sec1{
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 10%;
+        }
+        .nav{
+            text-align: right;
+            background-color: rgb(230, 230, 229);
+            padding: 1%;
+        }
+        .side1{
+            background-color: rgb(230, 230, 229);
+            padding: 1%;
+        }
+        .image{
+            display: flex;
+            background-color: white;
+        }
+        .heading{
+            font-weight: 600;
+            font-size: xx-large;
+            color: rgb(70, 161, 231);
+            padding: 2%;
+            width: 80%;
+            padding-left: 4%;
+        }
+        .para1, .para2, .para3{
+            font-weight: 100;
+            font-size: 23px;
+            color: black;
+            padding-top: 4%;
+        }
+        .para2, .para3, .para5, .para6{
+            padding-top: 4%;
+        }
+        .para{
+            padding-top: 8.2%;
+            font-size: 23px;
+            padding-left: 2%;
+            padding-right: 5%;
+        }
+        .para4{
+            padding-top: 4%;
+        }
+        .button{
+            width: 30%;
+            padding-left: 9%;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            margin: 30%;
+            background-color: rgb(23, 153, 228);
+        }
+        .side2{
+            background-color: rgb(230, 230, 229);
+            padding: 1%;
+        }
+        .side3{
+            background-color: rgb(230, 230, 229);
+            padding: 1%;
+        }
+
+        /* 3rd section */
+        .sec2{
+            background-color: rgb(230, 230, 229);
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 1%;
+        }
+        .nav1{
+            text-align: right;
+            background-color: rgb(230, 230, 229);
+            padding: 1%;
+        }
+        .page3{
+            display: flex;
+            justify-content: space-between;
+        }
+        .img{
+            display: grid;
+            padding: 2%;
+            gap: 3%;
+        }
+        .img1{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            background-image: url(./img1.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 180px;
+            height: 240px;
+            transition: 1s;
+        }
+        .img1:hover{
+            transform: scale(1.1); 
+        }
+        .img2{
+            grid-column: 2/3;
+            grid-row: 1/2;
+            background-image: url(./img2.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 180px;
+            height: 240px;
+            transition: 1s;
+        }
+        .img2:hover{
+            transform: scale(1.1); 
+        }
+        .img3{
+            grid-column: 3/4;
+            grid-row: 1/2;
+            background-image: url(./img3.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 180px;
+            height: 240px;
+            transition: 1s;
+        }
+        .img3:hover{
+            transform: scale(1.1); 
+        }
+        .img4{
+            grid-column: 4/5;
+            grid-row: 1/2;
+            background-image: url(./img4.jpg);
+            background-size: cover;
+            background-position: center;
+            padding: 90px;
+            padding-bottom: 120px;
+            transition: 1s;
+        }
+        .img4:hover{
+            transform: scale(1.1); 
+        }
+        .img5{
+            grid-column: 1/2;
+            grid-row: 2/3;
+            background-image: url(./img5.jpg);
+            background-size: cover;
+            background-position: center;
+            padding: 90px;
+            padding-bottom: 120px;
+            transition: 1s;
+        }
+        .img5:hover{
+            transform: scale(1.1); 
+        }
+        .img6{
+            grid-column: 2/3;
+            grid-row: 2/3;
+            background-image: url(./img6.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 180px;
+            height: 240px;
+            transition: 1s;
+        }
+        .img6:hover{
+            transform: scale(1.1); 
+        }
+        .img7{
+            grid-column: 3/4;
+            grid-row: 2/3;
+            background-image: url(./img7.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 180px;
+            height: 240px;
+            transition: 1s;
+        }
+        .img7:hover{
+            transform: scale(1.1); 
+        }
+        .img8{
+            grid-column: 4/5;
+            grid-row: 2/3;
+            background-image: url(./img8.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 180px;
+            height: 240px;
+            transition: 1s;
+        }
+        .img8:hover{
+            transform: scale(1.1); 
+        }
+        .img9{
+            display: flex;
+            justify-content: space-between;
+        }
+        .num1{
+            background-color:rgb(56, 188, 240) ;
+            grid-template-columns: 1/2;
+            padding: 2%;
+            padding-left: 4%;
+            padding-right: 4%;
+            margin-bottom: 10%;
+        }
+        .num2{
+            background-color: white;
+            grid-template-columns: 2/3;
+            padding: 2%;
+            padding-left: 4%;
+            padding-right: 4%;
+            margin-bottom: 10%;
+        }
+        .num3{
+            background-color: white;
+            grid-template-columns: 3/4;
+            padding: 2%;
+            padding-left: 4%;
+            padding-right: 4%;
+            margin-bottom: 10%;
+        }
+        .num4{
+            background-color: white;
+            grid-template-columns: 4/5;
+            padding: 2%;
+            padding-left: 4%;
+            padding-right: 4%;
+            margin-bottom: 10%;
+        }
+        .text{
+            margin-left: 8%;
+        }
+        .gallery{
+            font-size: x-large;
+            color: rgb(25, 146, 194);
+            padding-right: 220px;
+            padding-top: 30px;
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+        }
+        .all{
+            display: flex;
+        }
+        .all1{
+            padding-top: 7%;
+            color: rgb(25, 146, 194);
+            font-size: large;
+        }
+        .potrait, .nature, .animal, .building{
+            display: flex;
+        }
+        .potrait1, .nature1, .animal1, .building1{
+            padding-top: 12%;
+            font-size: large;
+        }
+        .text1{
+            margin-top: 7%;
+            margin-right: 5%;
+            font-size: large;
+        }
+        .text2{
+            margin-top: 5%;
+            margin-right: 5%;
+            margin-bottom: 10%;
+            font-size: large;
+        }
+        .space{
+            padding: 1%;
+        }
+        /* 4th section */
+
+        .sec3{
+            background-color: rgb(230, 230, 229);
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 1%;
+        }
+        .nav2{
+            text-align: right;
+            background-color: rgb(230, 230, 229);
+            padding: 1%;
+        }
+        .head{
+            font-weight: 550;
+            font-size: x-large;
+            margin-left: 3%;
+            color: rgb(103, 102, 102);
+        }
+        .page4{
+            display: grid;
+        }
+        .col1{
+            margin-top: 3%;
+            margin-left: 10%;
+            grid-column: 1/2;
+            grid-row: 1/4;
+            font-size: large;
+        }
+        .p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .p9{
+            margin-top: 5%;
+            margin-bottom: 9%;
+        }
+        .high{
+            color: rgb(56, 188, 240);
+        }
+        .col2{
+            grid-column: 2/3;
+            grid-row: 1/4;
+            margin-left: 5%;
+            margin-right: 5%;
+            font-size: large;
+        }
+        .button{
+            background-color: rgb(56, 188, 240);
+            color: white;
+            margin: 17%;
+            padding-right: 2%;
+        }
+        .col3{
+            grid-column: 3/4;
+            grid-row: 1/4;
+            margin-left: 5%;
+            margin-right: 5%;
+            font-size: large;
+        }
+        .im{
+            margin-top: 9%;
+        }
+
+        /* 5th section */
+        .sec4{
+            background-color: rgb(230, 230, 229);
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 1%;
+        }
+        .header{
+            color: rgb(56, 188, 240);
+            font-weight: 550;
+            font-size: x-large;
+            margin-left: 5%;
+        }
+        .page5{
+            display: grid;
+        }
+        .c1{
+            grid-column: 1/2;
+            margin-top: 1%;
+            margin-left: 9%;
+            margin-right: 9%;
+        }
+        .paragraph1, .paragraph2{
+            font-size: large;
+            margin-top: 7%;
+            margin-bottom: 7%;
+            margin-right: 5%;
+        }
+        .c2{
+            grid-column: 2/3;
+            margin-top: 1%;
+            margin-left: 5%;
+        }
+        .paragraph3, .paragraph4, .paragraph5{
+            font-size: large;
+            margin-top: 8%;
+            margin-bottom: 7%;
+            margin-right: 10%;
+            margin-left: 3%;
+        }
+        .btn{
+            background-color: rgb(56, 188, 240);
+            color: white;
+            width: 15%;
+            padding: 2%;
+            padding-left: 4%;
+            padding-right: 4%;
+            margin-left: 3%;
+            font-size: large;
+        }
+
+        /* 5th section */
+        .sec5{
+            background-color: rgb(230, 230, 229);
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 3%;
+            padding-bottom: 1%;
+        }
+        .h{
+            font-size: x-large;
+            color: rgb(56, 188, 240);
+            margin-left: 5%;
+            font-weight: 550;
+        }
+        .page6{
+            display: grid;
+            margin-top: 3%;
+            margin-bottom: 4%;
+        }
+        .form{
+            grid-column: 1/2;
+            margin-left: 20%;
+            margin-top: 5%;
+            margin-right: 30%;
+        }
+        .name{
+            background-color: white;
+            color: rgb(103, 102, 102);
+            padding-left: 9%;
+            font-size: large;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            width: 125%;
+            border: 0.5px solid;
+        }
+        .mail{
+            padding-left: 9%;
+            font-size: large;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            margin-top: 7%;
+            width: 125%;
+        }
+        .subject{
+            color: rgb(103, 102, 102);
+            padding-left: 9%;
+            font-size: large;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            margin-top: 7%;
+            display: flex;
+            justify-content: space-between;
+            width: 135%;
+        }
+        textarea{
+            height: 27%;
+            width: 125%;
+        }
+        .sub{
+            padding-top: 3%;
+        }
+        .icon{
+            padding-right: 4%;
+        }
+        .message{
+            color: rgb(103, 102, 102);
+            font-size: large;
+            margin-top: 7%;
+            padding-left: 9%;
+            padding-top: 5%;
+            font-family: 'Times New Roman';
+        }
+        .send{
+            background-color: rgb(56, 188, 240);
+            color: white;
+            margin-left: 50%;
+            margin-top: 9%;
+            font-size: large;
+            padding-left: 10%;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            margin-bottom: 25%;
+        }
+        .location{
+            grid-column: 2/4;
+            margin-right: 20%;
+            margin-top: 4%;
+            margin-left: 9%;
+        }
+        .map{
+            background-image: url(./map.jpg);
+            width: 90%;
+            height: 28vh;
+            background-size: cover;
+            position: relative;
+            padding-top: 2%;
+            padding-left: 2%;
+        }
+        .div{
+            background-color: white;
+            width: 45%;
+        }
+        .div1{
+            font-weight: 550;
+            padding-top: 3%;
+            padding-left: 3%;  
+        }
+        .div2{
+            padding-left: 3%;
+            padding-top: 3%;
+            padding-right: 5%;
+            font-size: small;
+        }
+        .div3{
+            padding-left: 3%;
+            padding-top: 5%;
+            padding-bottom: 3%;
+            font-size: small;
+            color: rgb(56, 188, 240);
+        }
+        #message{
+            rows:8;
+            columns:37;
+        }
+        .mapping{
+            color: rgb(137, 129, 129);
+            width: 40%;
+            padding-top: 7%;
+            padding-bottom: 3%;
+            font-size: large;
+        }
+        .telephone{
+            display: flex;
+        }
+        .tel{
+            padding-top: 6%;
+            color: rgb(137, 129, 129);
+            font-size: large;
+        }
+        .Email{
+            display: flex;
+        }
+        .Em{
+            padding-top: 6%;
+            color: rgb(137, 129, 129);
+            font-size: large;
+        }
+        .URL{
+            display: flex;
+        }
+        .link{
+            padding-top: 6%;
+            color: rgb(137, 129, 129);
+            font-size: large;
+        }
+
+        @media screen and (width<768px) {
+             .el1{
+                height: 100vh;
+             }
+            .ocean{
+                font-size: 20px;
+                padding-left: 45%;
+            }
+            .vibes{
+                font-size: 15px;
+            }
+            .matter{
+                font-size: 12px;
+            }
+            .section2{
+                width: 100%;
+                height: 150px;
+            }
+            .section3{
+                width: 40%;
+                display: grid;
+                grid-template-columns: auto auto auto;
+                row-gap: 3%;
+                column-gap: 10%;
+                margin-left: 20%;
+            }
+            .button{
+                width: 50%;
+            }
+            .el2{
+                width: 100%;
+                height: 1660vh;
+            }
+            .image{
+                display: flex;
+                flex-direction: column;
+            }
+            .img{
+                display: flex;
+                flex-direction: column;
+            }
+            .img4{
+                width: 18%;
+                height: 20vh;
+                margin-left: 25%;
+                margin-top: 1%;
+                margin-bottom: 2%;
+            }
+            .img5{
+                width: 18%;
+                height: 20vh;
+                margin-left: 25%;
+                margin-top: 1%;
+                margin-bottom: 2%;
+            }
+            .img1, .img2, .img3, .img6, .img7, .img8{
+                margin-left: 25%;
+                width: 50%;
+                height: 60vh;
+                margin-bottom: 2%;
+            }
+            .img9{
+                margin-top: 5%;
+                justify-content: space-evenly;
+            }
+            .text{
+                margin-top: -10%;
+            }
+            .page3{
+                display: flex;
+                flex-direction: column;
+            }
+            .page4{
+                display: flex;
+                flex-direction: column;
+            }
+            .head{
+                font-size: xx-large;
+            }
+            .col1{
+                font-size: x-large;
+                margin-left: 3%;
+                margin-right: 3%;
+            }
+            .col2{
+                font-size: x-large;
+            }
+            .button{
+                margin: 3%;
+                margin-left: 25%;
+                margin-bottom: 3%;
+                width: 30%;
+            }
+            .col3{
+                font-size: x-large;
+            }
+            .page5{
+                display: flex;
+                flex-direction: column;
+            }
+            .paragraph1, .paragraph2, .paragraph3, .paragraph4, .paragraph5{
+                font-size: x-large;
+            }
+            .btn{
+                width: 20%;
+                margin-left: 25%;
+                margin-bottom: 7%;
+            }
+            .page6{
+                display: flex;
+                flex-direction: column;
+            }
+            .form{
+                margin-left: 10%;
+            }
+            .URL{
+                margin-bottom: 3%;
+            }
+            .send{
+                width: 35%;
+                padding-right: 6%;
+            }
+            .location{
+                margin-top: -5%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="el1">
+        <div class="section1">
+            <p class="ocean">OCEAN</p>
+            <p class="vibes">vibes</p> 
+            <p class="matter">simple and effective design</p>
+        </div>
+        <div class="section2"></div>
+        <div class="section3">
+            <div class="item1">Introduction <br> <br> <img src="./introduction.jpg" alt=""></div>
+            <div class="item2">Gallery <br><br> <img src="./galary.jpg" alt=""></div>
+            <div class="item3">Testimonials <br><br> <img src="./testimonials.jpg" style="padding-left: 13px;"></div>
+            <div class="item4">About <br><br> <img src="./about.jpg"></div>
+            <div class="item5">Contact <br> <br> <img src="./contact.jpg" alt=""></div>
+        </div>
+    </div>
+    <div class="el2">
+        <!-- 2nd section -->
+        <div class="sec1">
+            <div class="nav">return home &cross;</div>
+            <div class="image">
+                <div class="side1"></div>
+                <img src="./intro.jpg">
+                <div class="heading">Introducing Ocean Vibes
+                    <div class="para1">This CSS template is 100% free provided by TemplateMo website. You can use this template for any purpose. You can apply this as a CMS theme or a custom website builder template.</div>
+                    <div class="para2">You can support our website by contributing a little via <strong>PayPal</strong> or spreading a word about TemplateMo to your friends. If you have any question, feel free to send us a message.</div>
+                    <div class="para3"><strong>Credit</strong> goes to Pexels for the vedio banner and images are taken from Unsplash are great websites for free photos.</div>
+                </div>
+                <div class="para">
+                    <div class="para4">You are not allowed to re-distribute this templete as a downloadable ZIP file on any templete collection website.</div>
+                    <div class="para5">Top right column is a return home with an icon that will close this pop-up page.</div>
+                    <div class="para6">Next Page will bring you to the gallery page directly without going back to main menu.</div>
+                    <div class="button">Next Page</div>
+                </div>
+                <div class="side2"></div>
+            </div>
+            <div class="side3"></div>
+        </div>
+        
+        <!-- 3rd section -->
+        <div class="sec2">
+            <div class="nav1">return home &cross;</div>
+            <div class="page3">
+                <div class="img">
+                    <div class="img1"></div>
+                    <div class="img2"></div>
+                    <div class="img3"></div>
+                    <div class="img4"></div>
+                    <div class="img5"></div>
+                    <div class="img6"></div>
+                    <div class="img7"></div>
+                    <div class="img8"></div>
+                    <div class="img9">
+                        <div class="num1">1</div>
+                        <div class="num2">2</div>
+                        <div class="num3">3</div>
+                        <div class="num4">4</div>
+                    </div>
+                </div>
+                <div class="text">
+                    <div class="gallery">Gallery</div>
+                    <div class="all">
+                        <img src="./all.jpg" style="width: 30px; padding-right: 5%; padding-top: 5%;">
+                        <div class="all1">All</div>
+                    </div>
+                    <div class="potrait">
+                        <img src="./potrait.jpg" style="width: 30px; padding-top: 10%; padding-right: 5%;">
+                        <div class="potrait1">Potraits</div>
+                    </div>
+                    <div class="nature">
+                        <img src="./nature.jpg" style="width: 30px; padding-top: 10%; padding-right: 5%;">
+                        <div class="nature1">Nature</div>
+                    </div>
+                    <div class="animal">
+                        <img src="./animals.jpg" style="width: 30px; padding-top: 10%; padding-right: 5%;">
+                        <div class="animal1">Animals</div>
+                    </div>
+                    <div class="building">
+                        <img src="./buildings.jpg" style="width: 30px; padding-top: 10%; padding-right: 5%;">
+                        <div class="building1">Buildings</div>
+                    </div>
+                    <div class="text1">Different icons are used for different categories. There are 4 or more pages of photos in this gallery. Each thumbnail has a nice hover effect.</div>
+                    <div class="text2">Proin lacus enim, finibus sed magna a, molestic lacinia est. Maecenas id dolor lorem. Donec sodales ex velit.</div>
+                </div>
+            </div>
+            <div class="space"></div>
+        </div>
+        
+        <!-- 4th section -->
+        <div class="sec3">
+            <div class="nav2">return home &cross;</div>
+            <div class="head">Testimonials</div>
+            <div class="page4">
+                <div class="col1">
+                    <div class="p1">OCEAN vibes is free website template from <span class="high">TemplateMo</span> website. You are allowed to use it for commercial purpose. You can convert this templete as a CMS theme or a custom website builder template.</div>
+                    <div class="p2">You may support us by telling your friends about our TemplateMo site. Fell free to contact us if you have anything to ask.</div>
+                    <div class="p3">You can make a little contribution using <strong>PayPal</strong> or saying about TemplateMo to your friends. Duis egastas lorem eu nisi finibus, sit amet elementum lacus pretium.</div>
+                    <div class="p4">In tempor felis vitae nulla feugiat aliguam. Vivamus vitae congue mi. Send maximus velit vestibulum nist condimentum hendrerit.</div>
+                </div>
+                <div class="col2">
+                    <div class="im"> <img src="./testimonial-01.jpg" width="85%"> </div>
+                    <div class="p5">"Suspendisse eu mollis diam, at ullamcorper diam. Ut sit amet arcu metus. Nullam mattis eros eget." by <span class="high">George, Chief Editor</span></div>
+                    <div class="p6">"Quisque et lorem ecumsan, sollicitudin dolor vel, facilisis eros. Donec aliquet felis in mollis egestas." by <span class="high">Mary, CEO of Web</span></div>
+                    <div class="button">Contact Us</div>
+                </div>
+                <div class="col3">
+                    <div class="p7">Duis sapien diam, eleifend eget vehicula sed, convallis sit amet elit. Aenean condimentum vulputate porta.</div>
+                    <div class="p8">Mauris accumsan erat nate, id siggitis felis gravida vitae. Sed iaculis tincidunt neque, a molestie magna vehicula at.</div>
+                    <div class="p9">Phasellus ornare magna nec nulla pharetra, nec tristique elit lobortis.</div>
+                    <div class="im"> <img src="./testimonial-02.jpg" width="85%"> </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5th section -->
+         <div class="sec4">
+            <div class="nav2">return home &cross;</div>
+            <div class="header">About Ocean Vibes</div>
+            <div class="page5">
+                <div class="c1">
+                    <div class="im"> <img src="./about 1.jpg" width="100%"> </div>
+                    <div class="paragraph1">Suspendisse sit amet pellentesque nunc. Vivamus fringilla tellus finibus lacus blandit, siet amet aliquet augue sagittis. Duis nec auctor felis, nec ornare ex. In non ante ligula.</div>
+                    <div class="paragraph2">Curabitur non augue dignissim est pulvibar lobortis, nunc vulputate, mi vel cursus mollis, justo mauris rutrum dui, id egestas ante ligula id nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.</div>
+                </div>
+                <div class="c2">
+                    <div class="paragraph3">You are NOT allowed to re-distribute this templete ZIP file on any website that <span class="high">collects and reports</span> free templetes from many different websites.</div>
+                    <div class="paragraph4">Pellentesque vitae ipsum vel risus molestie cursus nec quis lectus. Duis egestaslarem eu nisi finibus, sit amet elementum lacus pretium. In tempor felis vitae nulla feugiat aliquam.</div>
+                    <div class="paragraph5">If you need a working HTML contact form, please visit our contact page.</div>
+                    <div class="btn">Contact Us</div>
+                </div>
+            </div>
+         </div>
+
+         <!-- 6th section -->
+          <div class="sec5">
+            <div class="nav2">return home &cross;</div>
+            <div class="h">Contact Us</div>
+            <div class="page6">
+                <div class="form">
+                    <label for="name"></label>
+                    <input type="text" class="name" placeholder="Full Name">
+                    <label for="mail"></label>
+                    <input type="email" class="mail" placeholder="Email">
+                    <label for="subject"></label>
+                    <select name="Subject" class="subject">
+                        <optgroup label="Subject">
+                            <option>Subject</option>
+                            <option>Behaviour and Social Science</option>
+                            <option>Earth & Environmental Science</option>
+                            <option>Engineering</option>
+                            <option>Life Science</option>
+                          </optgroup>
+                    </select>
+                    <textarea class="message" placeholder="Message"></textarea>
+                    <div class="send">Send it now</div>
+                </div>
+                <div class="location">
+                    <div class="map">
+                        <div class="div">
+                            <div class="div1">Av Lucio Costa</div>
+                            <div class="div2">Rio de Janeiro, State of Rio de Janeiro, Brazil</div>
+                            <div class="div3">View larger map</div>
+                        </div>
+                    </div>
+                    <div class="mapping">110-220 nam vel ulticies mauris, Et gravida eros 10220</div>
+                    <div class="telephone">
+                        <img src="./tel.jpg" style="width: 30px; padding-right: 5%; padding-top: 5%;">
+                        <div class="tel">Tel:010-020-0340</div>
+                    </div>
+                    <div class="Email">
+                        <img src="./mail.jpg" style="width: 30px; padding-right: 5%; padding-top: 5%;">
+                        <div class="Em">Email:info@company.com</div>
+                    </div>
+                    <div class="URL">
+                        <img src="./link.jpg" style="width: 30px; padding-right: 5%; padding-top: 5%;">
+                        <div class="link">URL:www.company.com</div>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+    
+    
+</body>
+</html>
